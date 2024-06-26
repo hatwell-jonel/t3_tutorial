@@ -23,18 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={true} storageKey="dashboard.theme">
-          <Navbar />
-
-          <div className="flex">
-            <aside className="h-[100vh] hidden md:block w-[300px]">
-              <Sidebar />
-            </aside>
-            <div className="p-5 w-full md:max-w-[1140px]">
-              {children}
-            </div>
-          </div>
-
-
+            {children}
           <Toaster/>
         </ThemeProvider>
       </body>
